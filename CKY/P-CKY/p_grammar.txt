@@ -1,0 +1,33 @@
+S -> NP VP 0.80
+S -> S0 VP 0.15
+S0 -> Aux NP 1.0
+NP -> Det Nominal 0.20
+Nominal -> Nominal Noun 0.20
+Nominal -> Nominal PP 0.05
+VP -> Verb NP 0.20
+VP -> VP1 PP 0.10
+VP1 -> Verb NP 1.0
+VP -> Verb PP 0.15
+VP -> VP PP 0.15
+VP -> VP2 NP 0.05
+VP2 -> Verb NP 1.0
+PP -> Preposition NP 1.0
+Verb -> 'Book' 1.0
+Det -> 'the' 1.0
+Noun -> 'flight' 1.0
+Preposition -> 'through' 1.0
+Proper-Noun -> 'Houston' 1.0
+VP -> 'Book' 1.0
+Nominal -> 'flight' 1.0
+NP -> Noun 0.75
+NP -> Nominal Noun 0.20
+NP -> Nominal PP 0.05
+NP -> 'flight' 1.0
+NP -> 'Houston' 1.0
+S -> Verb NP 0.20
+S -> VP1 PP 0.10
+S -> Verb 0.35
+S -> Verb PP 0.15
+S -> VP PP 0.15
+S -> VP2 NP 0.05
+S -> 'Book' 1.0
