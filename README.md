@@ -6,11 +6,11 @@
 ```S -> NP VPS -> Aux NP VPS -> VPNP -> PronounNP -> Proper-NounNP -> Det NominalNominal -> NounNominal -> Nominal NounNominal -> Nominal PPVP -> Verb NPVP -> Verb NP PPVP -> VerbVP -> Verb PPVP -> VP PPPP -> Preposition NPVerb -> 'Book'Det -> 'the'Noun -> 'flight'Preposition -> 'through'Proper-Noun -> 'Houston'```
 After constructing the two files above, we can run the command:
 ```python CKY.py grammar.txt str1.txt```
-Then we can get the new grammar in CNF which is in *new_grammar.txt* file, possible parses and visualization of the parse tree:```The given sentence is contained in the language produced by the given grammarPossible parse(s):[S [Verb 'Book'] [NP [Det 'the'] [Nominal [Nominal 'flight'] [PP [Preposition 'through'] [NP 'Houston']]]]][S [VP1 [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]][S [VP [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]]```<center>![](https://github.com/Huntersxsx/CKY-Parser/img/tree1.PNG)
+Then we can get the new grammar in CNF which is in *new_grammar.txt* file, possible parses and visualization of the parse tree:```The given sentence is contained in the language produced by the given grammarPossible parse(s):[S [Verb 'Book'] [NP [Det 'the'] [Nominal [Nominal 'flight'] [PP [Preposition 'through'] [NP 'Houston']]]]][S [VP1 [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]][S [VP [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]]```<center>![](https://github.com/Huntersxsx/CKY-Parser/blob/master/img/tree1.PNG)
 
-![](https://github.com/Huntersxsx/CKY-Parser/img/tree2.PNG)
+![](https://github.com/Huntersxsx/CKY-Parser/blob/master/img/tree2.PNG)
 
-![](https://github.com/Huntersxsx/CKY-Parser/img/tree3.PNG)
+![](https://github.com/Huntersxsx/CKY-Parser/blob/master/img/tree3.PNG)
 
 </center>
 ------## Probabilistic CKY Parsing of PCFGsProbabilistic Context-Free Grammar is the simplest augmentation of the context-free grammar, and the algorithms for computing the most likely parse are simple extensions of the standard algorithms for parsing. Most modern probabilistic parsers are based on the probabilistic CKY.In this project, I also realize the Probabilistic CKY and put it in the P-CKY directory. Compared with CKY, the Probabilistic CKY has only made some simple modifications. The usage is similar, we can run the program by:
@@ -19,7 +19,9 @@
 ```The given sentence is contained in the language produced by the given grammarPossible parse(s):[S [Verb 'Book'] [NP [Det 'the'] [Nominal [Nominal 'flight'] [PP [Preposition 'through'] [NP 'Houston']]]]]the possibility of this parse is  0.002[S [VP1 [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]]the possibility of this parse is  0.02[S [VP [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]]the possibility of this parse is  0.006The most-likely parse is: [S [VP1 [Verb 'Book'] [NP [Det 'the'] [Nominal 'flight']]] [PP [Preposition 'through'] [NP 'Houston']]] its possibility is: 0.02```
 Considering that we cannot get the actual probability of each grammar rule, I assign every rule a possibilty and write the grammar in CNF, see it in the *p_grammar.txt*.
 
-<center>![](https://github.com/Huntersxsx/CKY-Parser/img/tree1.PNG)
+<center>
+![](https://github.com/Huntersxsx/CKY-Parser/blob/master/img/tree2.PNG)
+
 </center>
 
 
